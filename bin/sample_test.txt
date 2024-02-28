@@ -1,0 +1,10 @@
+import json
+
+with open('main.ipynb', mode = "r",  encoding= "utf-8" ) as g:
+        baseFile = json.loads(g.read())
+        with open(r'D:\Aayan\UI_TESTING\bin\mainNonVTI.ipynb', mode = "r",  encoding= "utf-8" ) as b:
+            codeFile = json.loads(b.read())
+            baseFile['cells'][0]['source'] =  codeFile['cells'][0]['source']
+            
+with open(r'D:\Aayan\UI_TESTING\bin\mainNonVTI.ipynb', 'w') as outfile:
+    json.dump(baseFile, outfile)            
