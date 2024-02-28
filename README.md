@@ -1,6 +1,6 @@
 # Introduction
 ## What is R-NET?
-[R-NET](https://drive.google.com/file/d/11LwXUnXKbCn8VSTV6v6DrAAxvTXvq2IE/view?usp=sharing) is an open source program designed to segment LSFM images and then volumetrically reconstruct those images into 3D representations. R-NET was designed by Aayan Rahat and Vinay Kadam under the guidance of Dr.Yichen Ding at the Ding-Incubator @UTDallas. 
+[R-NET](https://drive.google.com/file/d/11LwXUnXKbCn8VSTV6v6DrAAxvTXvq2IE/view?usp=sharing) is an open source program designed to segment LSFM images and then volumetrically reconstruct those images into 3D representations. R-NET was designed by Vinay Kadam under the guidance of Dr.Yichen Ding at the Ding-Incubator @UTDallas. 
 
 ### Where can I find more information?
 All of the latest code updates and issue updates can be found on our [github page](https://www.github.com/orgs/D-Incubator/repositories)
