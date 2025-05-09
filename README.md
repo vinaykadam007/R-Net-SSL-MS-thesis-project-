@@ -57,7 +57,7 @@ These are the images that you will use to test your model. Follow all the same c
 **Save Predicted Images**: This is where you want you test images’ masks to be outputted  
 
 # Export Tab
-![exportTab]([https://drive.google.com/file/d/](https://drive.google.com/uc?export=view&id=1wIrNXDZlnRxarn0Em2Oo3eoXCRI7DJoR)
+![exportTab](https://drive.google.com/uc?export=view&id=1wIrNXDZlnRxarn0Em2Oo3eoXCRI7DJoR)
 ### Prerequisites:
 Make sure you have docker desktop installed and you are logged in and set up. After that, make sure docker is open in the background. Make sure the “Slicerdocker.dll” file is also not in your current directory so that the code will run correctly. 
 
