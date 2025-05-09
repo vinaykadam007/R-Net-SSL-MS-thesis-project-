@@ -45,7 +45,7 @@ These are the images that you will use to test your model. Follow all the same c
 **Select Algorithm**: For now, we only have the PixelHop algorithm. Once we develop more algorithms, we will add more options 
 
 # Test Tab
-![testTab](https://drive.google.com/file/d/1yG60d0BITpk5J7Si5ednVVWVJt3Dg0PL/view?usp=sharing)
+![testTab](https://drive.google.com/uc?export=view&id=1yG60d0BITpk5J7Si5ednVVWVJt3Dg0PL)
 ## Fields 
 
 **Test Images**: This is the folder that you will use to take raw images (same format as mentioned above) that will now become masks
@@ -57,7 +57,7 @@ These are the images that you will use to test your model. Follow all the same c
 **Save Predicted Images**: This is where you want you test images’ masks to be outputted  
 
 # Export Tab
-![exportTab](https://drive.google.com/file/d/1wIrNXDZlnRxarn0Em2Oo3eoXCRI7DJoR/view?usp=sharing)
+![exportTab]([https://drive.google.com/file/d/](https://drive.google.com/uc?export=view&id=1wIrNXDZlnRxarn0Em2Oo3eoXCRI7DJoR)
 ### Prerequisites:
 Make sure you have docker desktop installed and you are logged in and set up. After that, make sure docker is open in the background. Make sure the “Slicerdocker.dll” file is also not in your current directory so that the code will run correctly. 
 
