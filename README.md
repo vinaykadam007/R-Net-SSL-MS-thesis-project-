@@ -24,7 +24,7 @@ Here are needed libraries: **os, multiprocessing, glob, random, subprocess, PyQt
 Make sure, you install these variables to the python interpreter or within the directory of the folder. You can type “cmd” into the address bar of the directory to do this. 
 
 # Train Tab
-![trainTab](https://github.com/D-Incubator/R-NET/blob/exeFile/images/train%20page.PNG)
+![trainTab](https://drive.google.com/file/d/119LspquAOys2FMjHfuuUWai9p89NBZt1/view?usp=sharing)
 ## Training Images
 These are the images that you will use to train your model. Make sure, your images are all in png format. If they are not in the correct format, you can use this program ([Fiji]("https://imagej.net/software/fiji/downloads")) to save these images as png format [tutorial](https://www.youtube.com/watch?v=6OlIAsoUdj0). Also make sure that your images are in grayscale format, not RGB. [tutorial here](https://www.linkedin.com/advice/0/what-benefits-converting-image-grayscale-imagej-skills-imagej). 
 
@@ -45,7 +45,7 @@ These are the images that you will use to test your model. Follow all the same c
 **Select Algorithm**: For now, we only have the PixelHop algorithm. Once we develop more algorithms, we will add more options 
 
 # Test Tab
-![testTab](https://github.com/D-Incubator/R-NET/blob/exeFile/images/dedicated%20test%20page.PNG)
+![testTab](https://drive.google.com/file/d/1yG60d0BITpk5J7Si5ednVVWVJt3Dg0PL/view?usp=sharing)
 ## Fields 
 
 **Test Images**: This is the folder that you will use to take raw images (same format as mentioned above) that will now become masks
@@ -57,7 +57,7 @@ These are the images that you will use to test your model. Follow all the same c
 **Save Predicted Images**: This is where you want you test images’ masks to be outputted  
 
 # Export Tab
-![exportTab](https://github.com/D-Incubator/R-NET/blob/exeFile/images/export%20page.PNG)
+![exportTab](https://drive.google.com/file/d/1wIrNXDZlnRxarn0Em2Oo3eoXCRI7DJoR/view?usp=sharing)
 ### Prerequisites:
 Make sure you have docker desktop installed and you are logged in and set up. After that, make sure docker is open in the background. Make sure the “Slicerdocker.dll” file is also not in your current directory so that the code will run correctly. 
 
