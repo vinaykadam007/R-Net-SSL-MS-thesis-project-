@@ -24,7 +24,7 @@ Here are needed libraries: **os, multiprocessing, glob, random, subprocess, PyQt
 Make sure, you install these variables to the python interpreter or within the directory of the folder. You can type “cmd” into the address bar of the directory to do this. 
 
 # Train Tab
-![trainTab](https://drive.google.com/file/d/119LspquAOys2FMjHfuuUWai9p89NBZt1/view?usp=sharing)
+![trainTab](https://drive.google.com/uc?export=view&id=119LspquAOys2FMjHfuuUWai9p89NBZt1)
 ## Training Images
 These are the images that you will use to train your model. Make sure, your images are all in png format. If they are not in the correct format, you can use this program ([Fiji]("https://imagej.net/software/fiji/downloads")) to save these images as png format [tutorial](https://www.youtube.com/watch?v=6OlIAsoUdj0). Also make sure that your images are in grayscale format, not RGB. [tutorial here](https://www.linkedin.com/advice/0/what-benefits-converting-image-grayscale-imagej-skills-imagej). 
 
