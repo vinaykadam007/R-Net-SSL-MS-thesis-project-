@@ -5,7 +5,7 @@
 ### Where can I find more information?
 All of the latest code updates and issue updates can be found on our [github page](https://www.github.com/orgs/D-Incubator/repositories)
 
-# Results
+# Qualitative Analysis
 ![Results](https://drive.google.com/uc?export=view&id=1f6qn67Reow35LjA632POpOELXvm4yyMn)
 
 
