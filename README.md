@@ -6,7 +6,7 @@
 All of the latest code updates and issue updates can be found on our [github page](https://www.github.com/orgs/D-Incubator/repositories)
 
 # Results
-![fileStructure] (https://drive.google.com/file/d/1f6qn67Reow35LjA632POpOELXvm4yyMn/view?usp=sharing)
+https://drive.google.com/file/d/1f6qn67Reow35LjA632POpOELXvm4yyMn/view?usp=sharing
 
 
 # Dependencies + Install
