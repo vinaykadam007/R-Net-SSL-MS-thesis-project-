@@ -5,12 +5,8 @@
 ### Where can I find more information?
 All of the latest code updates and issue updates can be found on our [github page](https://www.github.com/orgs/D-Incubator/repositories)
 
-# Folder/Data Structure
-## Folder Setup
-Most of these folders will come pre populated with the download. If not, make sure your file structure and folder structure matches the one below (case sensitive). Also make sure that no part of your file path has spaces (will cause issues in docker commands)
-
-![fileStructure](https://github.com/D-Incubator/R-NET/blob/exeFile/fileStructure.PNG)
-
+# Results
+![fileStructure] (https://drive.google.com/file/d/1f6qn67Reow35LjA632POpOELXvm4yyMn/view?usp=sharing)
 
 
 # Dependencies + Install
