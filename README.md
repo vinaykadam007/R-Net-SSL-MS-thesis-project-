@@ -6,10 +6,11 @@ R-NET is an open-source framework for segmenting light-sheet fluorescence micros
 The model leverages PixelHop-based successive subspace learning (SSL) for efficient, accurate segmentation.
 R-NET was developed by Vinay Kadam under the guidance of Dr. Yichen Ding at the Ding Incubator, UT Dallas.
 
-# Qualitative Analysis
+# Visual Results
+## Qualitative Analysis
 ![Results](https://drive.google.com/uc?export=view&id=1OKMQUmXL5gL5sAfkqpxfXgLC_tPivW1A)
 
-# VR Analysis
+## VR-Based 3D Analysis
 ![Results](https://drive.google.com/uc?export=view&id=1khC5tkY3OveJUbBQgd269FdONCY5c7Ao)
 
 # Dependencies + Install
@@ -22,50 +23,74 @@ Here are needed libraries: **os, multiprocessing, glob, random, subprocess, PyQt
 
 Make sure, you install these variables to the python interpreter or within the directory of the folder. You can type “cmd” into the address bar of the directory to do this. 
 
-# Train Tab
+# Training Module
+## Train Tab
 ![trainTab](https://drive.google.com/uc?export=view&id=119LspquAOys2FMjHfuuUWai9p89NBZt1)
-## Training Images
-These are the images that you will use to train your model. Make sure, your images are all in png format. If they are not in the correct format, you can use this program ([Fiji]("https://imagej.net/software/fiji/downloads")) to save these images as png format [tutorial](https://www.youtube.com/watch?v=6OlIAsoUdj0). Also make sure that your images are in grayscale format, not RGB. [tutorial here](https://www.linkedin.com/advice/0/what-benefits-converting-image-grayscale-imagej-skills-imagej). 
 
-Once your images are in this format, make sure that they are named with this format (image_raw_##.png or image_seg_##.png) within the same folder. Make sure they are named this way, case sensitively. Go into the folder completely and select it: if you have an error, make sure you are completely into the folder.
-## Testing Images
-These are the images that you will use to test your model. Follow all the same conventions and data formatting as above. 
-## Fields 
-**Number of Classes**: You can choose the number of classes to use. For now, we have only tested binary segmentation so use 2 classes for now. 
+## Preparing Training Data
 
-**Variance**: This is the variation of the generated model or the “energy percentage”, you can customize this but we recommend somewhere around 0.96 to 0.98
+● **Format**: PNG, grayscale only (not RGB).
 
-**Number of Training Images**: This determines how many images your model will be trained on, the more images you have, the more accurate your model will be (until overfitting) but it will take much more time
+● **Naming convention**:
+  ○ image_raw_##.png
+  ○ image_seg_##.png
 
-**More than 1 image?**: This will choose whether or not multiprocessing (GPU based computation) will be used. If you are using multiple images or testing a large model, we recommend clicking this option and implementing the multiprocessing PixelHop algorithm 
+● Use Fiji to convert images if needed.
 
-**Folder to Save Outputs**: This is where the test images’ mask(s) will be outputted as well as the model files for the test files
+● Ensure files are inside the selected folder (case-sensitive names).
 
-**Select Algorithm**: For now, we only have the PixelHop algorithm. Once we develop more algorithms, we will add more options 
+## Preparing Testing Data
 
-# Test Tab
+● Same format, naming, and grayscale requirement as training images.
+
+## Configurable Fields
+
+● **Number of Classes** → Supports binary and Multi-class segmentation → 2.
+
+● **Variance (Energy %)** → Recommended: 0.96 – 0.98.
+
+● **Number of Training Images** → More images = better accuracy (beware of overfitting).
+
+● **Multiprocessing Option** → Enable for GPU/multi-image runs.
+
+● **Output Folder** → Directory for masks + trained models.
+
+
+# Testing Module
+## Test Tab
 ![testTab](https://drive.google.com/uc?export=view&id=1yG60d0BITpk5J7Si5ednVVWVJt3Dg0PL)
-## Fields 
 
-**Test Images**: This is the folder that you will use to take raw images (same format as mentioned above) that will now become masks
+## Required Inputs
 
-**Main Model Files**: The “Train/Test” tab will output two files called “pixelhop1.pkl” and “pixelhop2.pkl”, upload both of these files to the model files folders 
+● **Test Images** → Raw input folder (PNG, grayscale).
 
-**Extra Model Files**: These are the files found within the “Folder to Save Outputs” from before. You can see each file that needs to be uploaded based on the text within the address bar. 
+● **Main Model Files** → pixelhop1.pkl & pixelhop2.pkl (from training).
 
-**Save Predicted Images**: This is where you want you test images’ masks to be outputted  
+● **Extra Model Files** → Located in the output folder from training.
 
-# Export Tab
+● **Predicted Images Save Path** → Directory where generated masks will be saved.
+
+# Export Module
+## Export Tab
 ![exportTab](https://drive.google.com/uc?export=view&id=1wIrNXDZlnRxarn0Em2Oo3eoXCRI7DJoR)
-### Prerequisites:
-Make sure you have docker desktop installed and you are logged in and set up. After that, make sure docker is open in the background. Make sure the “Slicerdocker.dll” file is also not in your current directory so that the code will run correctly. 
 
-### Fields 
-**Segmented Images**: This is the folder of your segmented images (.tif format)
+## Prerequisites
 
-**Spacing/Height/Width**: This is the dimensions/spacing (Z, Y, X) of your model. Please try to match this as much as possible with your original image dimensions or with the dimensions of what your model to be. This may take some experimentation. 
+● Install & log in to **Docker Desktop**.
 
-**VTI Method**: We have two methods of reconstruction. The first “VTI Method” is based on reconstruction that will create a VTI model and then convert that into an OBJ model. We recommend this option for large datasets or “cell data” as you can easily change the spacing and scaling of the model. The “Non VTI Method” is based on cell based reconstruction. This method will output a model for every image (95 images means 95 .obj and .mtl files) but the “VTI Method” will only output one model file for the whole image.
+● Ensure Docker is running in the background.
+
+● Remove Slicerdocker.dll from the current directory (avoids runtime issues).
+
+## Configurable Fields
+
+● **Segmented Images** → Folder of segmented .tif files.
+
+● **Spacing / Dimensions (Z, Y, X)** → Match as closely as possible to original image dimensions.
+
+● **VTI Method (Recommended for large datasets)** → Produces a single .obj model, scalable via spacing.
+
+● **Non-VTI Method** → Creates one .obj & .mtl per slice (e.g., 95 images → 95 models).
 
 
 
