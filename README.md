@@ -6,7 +6,7 @@
 All of the latest code updates and issue updates can be found on our [github page](https://www.github.com/orgs/D-Incubator/repositories)
 
 # Qualitative Analysis
-![Results](https://drive.google.com/uc?export=view&id=1f6qn67Reow35LjA632POpOELXvm4yyMn)
+![Results](https://drive.google.com/uc?export=view&id=1OKMQUmXL5gL5sAfkqpxfXgLC_tPivW1A)
 
 
 # Dependencies + Install
@@ -63,4 +63,5 @@ Make sure you have docker desktop installed and you are logged in and set up. Af
 **Spacing/Height/Width**: This is the dimensions/spacing (Z, Y, X) of your model. Please try to match this as much as possible with your original image dimensions or with the dimensions of what your model to be. This may take some experimentation. 
 
 **VTI Method**: We have two methods of reconstruction. The first “VTI Method” is based on reconstruction that will create a VTI model and then convert that into an OBJ model. We recommend this option for large datasets or “cell data” as you can easily change the spacing and scaling of the model. The “Non VTI Method” is based on cell based reconstruction. This method will output a model for every image (95 images means 95 .obj and .mtl files) but the “VTI Method” will only output one model file for the whole image.
+
 
