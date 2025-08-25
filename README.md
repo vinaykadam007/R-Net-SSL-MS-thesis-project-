@@ -1,7 +1,7 @@
 # R-NET: Light-Sheet Fluorescence Microscopy Image Segmentation & 3D Reconstruction
 ## Overview
 
-R-NET is an open-source framework for segmenting light-sheet fluorescence microscopy (LSFM) images and reconstructing them into 3D volumetric representations.
+**R-NET** is an open-source framework for segmenting light-sheet fluorescence microscopy (LSFM) images and reconstructing them into 3D volumetric representations.
 
 The model leverages PixelHop-based successive subspace learning (SSL) for efficient, accurate segmentation.
 R-NET was developed by Vinay Kadam under the guidance of Dr. Yichen Ding at the Ding Incubator, UT Dallas.
@@ -90,7 +90,17 @@ Make sure, you install these variables to the python interpreter or within the d
 
 ● **VTI Method (Recommended for large datasets)** → Produces a single .obj model, scalable via spacing.
 
-● **Non-VTI Method** → Creates one .obj & .mtl per slice (e.g., 95 images → 95 models).
+● **Non-VTI Method** → Creates one .obj & .mtl per slice.
+
+
+# Citation
+
+If you use **R-NET** in your work, please cite appropriately (citation details coming soon).
+
+# License
+
+R-NET is released under an **open-source license** (add license type here, e.g., MIT/GPL).
+
 
 
 
