@@ -1,6 +1,10 @@
-# Introduction
-## R-NET
-R-NET is an open source program designed to segment LSFM images and then volumetrically reconstruct those images into 3D representations. R-NET was designed by Vinay Kadam (based on pixelhop architecture using successive subspace learning) under the guidance of Dr.Yichen Ding at the Ding-Incubator @UTDallas. 
+# R-NET: Light-Sheet Fluorescence Microscopy Image Segmentation & 3D Reconstruction
+## Overview
+
+R-NET is an open-source framework for segmenting light-sheet fluorescence microscopy (LSFM) images and reconstructing them into 3D volumetric representations.
+
+The model leverages PixelHop-based successive subspace learning (SSL) for efficient, accurate segmentation.
+R-NET was developed by Vinay Kadam under the guidance of Dr. Yichen Ding at the Ding Incubator, UT Dallas.
 
 # Qualitative Analysis
 ![Results](https://drive.google.com/uc?export=view&id=1OKMQUmXL5gL5sAfkqpxfXgLC_tPivW1A)
@@ -62,6 +66,7 @@ Make sure you have docker desktop installed and you are logged in and set up. Af
 **Spacing/Height/Width**: This is the dimensions/spacing (Z, Y, X) of your model. Please try to match this as much as possible with your original image dimensions or with the dimensions of what your model to be. This may take some experimentation. 
 
 **VTI Method**: We have two methods of reconstruction. The first “VTI Method” is based on reconstruction that will create a VTI model and then convert that into an OBJ model. We recommend this option for large datasets or “cell data” as you can easily change the spacing and scaling of the model. The “Non VTI Method” is based on cell based reconstruction. This method will output a model for every image (95 images means 95 .obj and .mtl files) but the “VTI Method” will only output one model file for the whole image.
+
 
 
 
