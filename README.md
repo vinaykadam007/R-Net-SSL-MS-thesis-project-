@@ -7,7 +7,7 @@ The model leverages PixelHop-based successive subspace learning (SSL) for effici
 R-NET was developed by Vinay Kadam under the guidance of Dr. Yichen Ding at the Ding Incubator, UT Dallas.
 
 # Pipeline Overview
-![Pipeline](https://drive.google.com/uc?export=view&id=1jInU_j3jq_Uqky9taCIpu6ahK53ezQdA)
+![Pipeline](https://drive.google.com/uc?export=view&id=1lAhobxT2CabMv4FB9Qh0ely2RsGGiQU1)
 
 # Algorithm Overview
 ![Algorithm](https://drive.google.com/uc?export=view&id=1cB7Z-bznt2hNAsGFeWX0ryfDAy4IYOEk)
@@ -106,6 +106,7 @@ If you use **R-NET** in your work, please cite appropriately (citation details c
 # License
 
 R-NET is released under an **open-source license** (add license type here, e.g., MIT/GPL).
+
 
 
 
