@@ -16,6 +16,9 @@ R-NET was developed by Vinay Kadam under the guidance of Dr. Yichen Ding at the 
 ## Qualitative Analysis
 ![Results](https://drive.google.com/uc?export=view&id=1OKMQUmXL5gL5sAfkqpxfXgLC_tPivW1A)
 
+## Quantitative Analysis
+![Results](https://drive.google.com/uc?export=view&id=1mEV8AZ4I_XncQtRDP_zvdtrvdKEWRsz6)
+
 ## VR-Based 3D Analysis
 ![Results](https://drive.google.com/uc?export=view&id=1khC5tkY3OveJUbBQgd269FdONCY5c7Ao)
 
@@ -106,6 +109,7 @@ If you use **R-NET** in your work, please cite appropriately (citation details c
 # License
 
 R-NET is released under an **open-source license** (add license type here, e.g., MIT/GPL).
+
 
 
 
