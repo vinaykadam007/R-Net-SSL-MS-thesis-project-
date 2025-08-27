@@ -1,123 +1,108 @@
-# R-NET: Light-Sheet Fluorescence Microscopy Image Segmentation & 3D Reconstruction
-## Overview
+# 🔬 R-NET: Light-Sheet Fluorescence Microscopy (LSFM) Segmentation & 3D Reconstruction
 
-**R-NET** is an open-source framework for segmenting light-sheet fluorescence microscopy (LSFM) images and reconstructing them into 3D volumetric representations.
+[![Python](https://img.shields.io/badge/Python-3.11+-blue?logo=python)](https://www.python.org/)  
+[![Deep Learning](https://img.shields.io/badge/Successive%20Subspace%20Learning-PixelHop-orange)]()  
+[![3D Visualization](https://img.shields.io/badge/3D%20&%20VR-Enabled-green)]()  
 
-The model leverages PixelHop-based successive subspace learning (SSL) for efficient, accurate segmentation.
-R-NET was developed by Vinay Kadam under the guidance of Dr. Yichen Ding at the Ding Incubator, UT Dallas.
+---
 
-# Pipeline Overview
+## 📌 Overview
+**R-NET** is an open-source framework for **automated segmentation** of light-sheet fluorescence microscopy (LSFM) images and subsequent **3D volumetric reconstruction**. The algorithm leverages **PixelHop-based Successive Subspace Learning (SSL)** for efficient segmentation with minimal training data.
+
+Developed by **Vinay Kadam** under the guidance of **Dr. Yichen Ding** at the Ding Incubator, University of Texas at Dallas, the framework aims to bridge the gap between raw microscopy data and **interactive 3D/VR analysis**.
+
+**Objective:** Develop an automated segmentation pipeline for cardiac trabeculae in LSFM images using PixelHop with minimal training images.  
+**Outcome:** Achieved **92% IoU** and **94% F1 score** using only 19 training images — outperforming U-Net. Delivered **7× faster GPU processing** and an integrated GUI tool for **3D model visualization and VR-based analysis**【42†Thesis】.
+
+---
+
+## 🧪 Pipeline Overview
 ![Pipeline](https://drive.google.com/uc?export=view&id=1lAhobxT2CabMv4FB9Qh0ely2RsGGiQU1)
 
-# Algorithm Overview
+## ⚙️ Algorithm Overview
 ![Algorithm](https://drive.google.com/uc?export=view&id=1cB7Z-bznt2hNAsGFeWX0ryfDAy4IYOEk)
 
-# Visual Results
-## Qualitative Analysis
+---
+
+## 📊 Results & Analysis
+### Qualitative Results
 ![Results](https://drive.google.com/uc?export=view&id=1OKMQUmXL5gL5sAfkqpxfXgLC_tPivW1A)
 
-## Quantitative Analysis
+### Quantitative Results
 ![Results](https://drive.google.com/uc?export=view&id=1mEV8AZ4I_XncQtRDP_zvdtrvdKEWRsz6)
 
-## VR-Based 3D Analysis
+### VR-Enabled 3D Models
 ![Results](https://drive.google.com/uc?export=view&id=1khC5tkY3OveJUbBQgd269FdONCY5c7Ao)
 
-# Dependencies + Install
-## Python
-Firstly, make sure that you have python installed on your computer. We recommend installing python 3.11.3 and adding it to your [path](https://www.machinelearningplus.com/python/add-python-to-path-how-to-add-python-to-the-path-environment-variable-in-windows/) and following the basic setup expectations. This will make sure all the libraries run accurately and are compatible. 
+**Key Insight:** R-NET demonstrates superior segmentation performance with minimal data compared to U-Net, enabling scalable and interactive biomedical analysis【42†Thesis】.
 
-### Associated Libraries 
-Most libraries will come pre-installed within the exe file and should run properly. If not, make sure to have the following libraries. You can use the pip install command to install these libraries. You can follow this [tutorial](https://packaging.python.org/en/latest/tutorials/installing-packages/) if you are unsure about “pip install”. 
-Here are needed libraries: **os, multiprocessing, glob, random, subprocess, PyQt5, platform, sys, numpy, opencv-python, matplotlib, shutil, time, webbrowser, re, IPython, nbformat, json, ipynb-py-convert (INSTALL THIS BY HAND)**
+---
 
-Make sure, you install these variables to the python interpreter or within the directory of the folder. You can type “cmd” into the address bar of the directory to do this. 
+## 🛠️ Installation & Dependencies
+### Python Setup
+Ensure **Python 3.11+** is installed and added to your [PATH](https://www.machinelearningplus.com/python/add-python-to-path-how-to-add-python-to-the-path-environment-variable-in-windows/).
 
-# Training Module
-## Train Tab
+### Required Libraries
+Install dependencies via pip:
+```bash
+pip install os multiprocessing glob random subprocess PyQt5 platform sys numpy opencv-python matplotlib shutil time webbrowser re IPython nbformat json
+pip install ipynb-py-convert  # must be installed manually
+```
+
+---
+
+## 🏋️ Training Module
+### Train Tab Interface
 ![trainTab](https://drive.google.com/uc?export=view&id=119LspquAOys2FMjHfuuUWai9p89NBZt1)
 
-## Preparing Training Data
+#### Preparing Training Data
+- **Format:** PNG, grayscale only.
+- **Naming Convention:**  
+  - `image_raw_##.png`  
+  - `image_seg_##.png`
+- Use **Fiji** for image conversion if required.
+- Files must be in the selected folder with case-sensitive names.
 
-● **Format**: PNG, grayscale only (not RGB).
+#### Configurable Fields
+- **Number of Classes:** Binary / Multi-class (default = 2).
+- **Variance (Energy %):** Recommended 0.96 – 0.98.
+- **Training Images:** More improves accuracy, but beware overfitting.
+- **Multiprocessing Option:** Enable for GPU acceleration.
+- **Output Folder:** Saves masks + trained models.
 
-● **Naming convention**:
-  ○ image_raw_##.png
-  ○ image_seg_##.png
+---
 
-● Use Fiji to convert images if needed.
-
-● Ensure files are inside the selected folder (case-sensitive names).
-
-## Preparing Testing Data
-
-● Same format, naming, and grayscale requirement as training images.
-
-## Configurable Fields
-
-● **Number of Classes** → Supports binary and Multi-class segmentation → 2.
-
-● **Variance (Energy %)** → Recommended: 0.96 – 0.98.
-
-● **Number of Training Images** → More images = better accuracy (beware of overfitting).
-
-● **Multiprocessing Option** → Enable for GPU/multi-image runs.
-
-● **Output Folder** → Directory for masks + trained models.
-
-
-# Testing Module
-## Test Tab
+## 🧪 Testing Module
+### Test Tab Interface
 ![testTab](https://drive.google.com/uc?export=view&id=1yG60d0BITpk5J7Si5ednVVWVJt3Dg0PL)
 
-## Required Inputs
+#### Required Inputs
+- **Test Images:** PNG, grayscale.
+- **Model Files:** `pixelhop1.pkl`, `pixelhop2.pkl` (from training).
+- **Extra Files:** Generated during training.
+- **Save Path:** Directory for predicted masks.
 
-● **Test Images** → Raw input folder (PNG, grayscale).
+---
 
-● **Main Model Files** → pixelhop1.pkl & pixelhop2.pkl (from training).
-
-● **Extra Model Files** → Located in the output folder from training.
-
-● **Predicted Images Save Path** → Directory where generated masks will be saved.
-
-# Export Module
-## Export Tab
+## 📤 Export Module
+### Export Tab Interface
 ![exportTab](https://drive.google.com/uc?export=view&id=1wIrNXDZlnRxarn0Em2Oo3eoXCRI7DJoR)
 
-## Prerequisites
+#### Prerequisites
+- Install & run **Docker Desktop**.
+- Remove `Slicerdocker.dll` from directory (avoids runtime issues).
 
-● Install & log in to **Docker Desktop**.
+#### Configurable Fields
+- **Segmented Images:** Folder of `.tif` files.
+- **Spacing/Dimensions (Z, Y, X):** Match original imaging specs.
+- **VTI Method (Recommended):** Single scalable `.obj` model.
+- **Non-VTI Method:** Creates `.obj` + `.mtl` per slice.
 
-● Ensure Docker is running in the background.
+---
 
-● Remove Slicerdocker.dll from the current directory (avoids runtime issues).
+## 📜 License
+R-NET is released under an **open-source license** (add license type, e.g., MIT/GPL).
 
-## Configurable Fields
+---
 
-● **Segmented Images** → Folder of segmented .tif files.
-
-● **Spacing / Dimensions (Z, Y, X)** → Match as closely as possible to original image dimensions.
-
-● **VTI Method (Recommended for large datasets)** → Produces a single .obj model, scalable via spacing.
-
-● **Non-VTI Method** → Creates one .obj & .mtl per slice.
-
-
-# Citation
-
-If you use **R-NET** in your work, please cite appropriately (citation details coming soon).
-
-# License
-
-R-NET is released under an **open-source license** (add license type here, e.g., MIT/GPL).
-
-
-
-
-
-
-
-
-
-
-
-
+✨ If you find this project useful, please ⭐ the repo and share it with the community!
