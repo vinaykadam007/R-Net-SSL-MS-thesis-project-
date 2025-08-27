@@ -12,7 +12,7 @@
 Developed by **Vinay Kadam** under the guidance of **Dr. Yichen Ding** at the Ding Incubator, University of Texas at Dallas, the framework aims to bridge the gap between raw microscopy data and **interactive 3D/VR analysis**.
 
 **Objective:** Develop an automated segmentation pipeline for cardiac trabeculae in LSFM images using PixelHop with minimal training images.  
-**Outcome:** Achieved **92% IoU** and **94% F1 score** using only 19 training images — outperforming U-Net. Delivered **7× faster GPU processing** and an integrated GUI tool for **3D model visualization and VR-based analysis**【42†Thesis】.
+**Outcome:** Achieved **92% IoU** and **94% F1 score** using only 19 training images — outperforming U-Net. Delivered **7× faster GPU processing** and an integrated GUI tool for **3D model visualization and VR-based analysis**.
 
 ---
 
@@ -106,3 +106,4 @@ R-NET is released under an **open-source license** (add license type, e.g., MIT/
 ---
 
 ✨ If you find this project useful, please ⭐ the repo and share it with the community!
+
