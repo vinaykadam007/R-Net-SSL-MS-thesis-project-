@@ -34,7 +34,6 @@ Developed by **Vinay Kadam** under the guidance of **Dr. Yichen Ding** at the Di
 ### VR-Enabled 3D Models
 ![Results](https://drive.google.com/uc?export=view&id=1khC5tkY3OveJUbBQgd269FdONCY5c7Ao)
 
-**Key Insight:** R-NET demonstrates superior segmentation performance with minimal data compared to U-Net, enabling scalable and interactive biomedical analysis【42†Thesis】.
 
 ---
 
@@ -106,4 +105,5 @@ R-NET is released under an **open-source license** (add license type, e.g., MIT/
 ---
 
 ✨ If you find this project useful, please ⭐ the repo and share it with the community!
+
 
